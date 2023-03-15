@@ -1,0 +1,69 @@
+<body>
+  <h1>{{Symbol}}</h1>
+  <div class="keys">
+    <div class="whites">
+      <div class="key label" data-note="C"><span>C</span></div>
+      <div class="key" data-note="D"></div>
+      <div class="key" data-note="E"></div>
+      <div class="key" data-note="F"></div>
+      <div class="key" data-note="G"></div>
+      <div class="key" data-note="A"></div>
+      <div class="key" data-note="B"></div>
+      <div class="key label" data-note="C2"><span>C</span></div>
+      <div class="key" data-note="D2"></div>
+      <div class="key" data-note="E2"></div>
+      <div class="key" data-note="F2"></div>
+      <div class="key" data-note="G2"></div>
+      <div class="key" data-note="A2"></div>
+      <div class="key" data-note="B2"></div>
+    </div>
+    <div class="blacks">
+      <div class="key" data-note="Db"></div>
+      <div class="key" data-note="Eb"></div>
+      <div class="key fake"></div>
+      <div class="key" data-note="Gb"></div>
+      <div class="key" data-note="Ab"></div>
+      <div class="key" data-note="Bb"></div>
+      <div class="key fake"></div>
+      <div class="key" data-note="Db2"></div>
+      <div class="key" data-note="Eb2"></div>
+      <div class="key fake"></div>
+      <div class="key" data-note="Gb2"></div>
+      <div class="key" data-note="Ab2"></div>
+      <div class="key" data-note="Bb2"></div>
+      <div class="key fake"></div>
+    </div>
+  </div>
+</body>
+<script>
+  var notes = document.getElementById("field").innerHTML.split(" ");
+	for (var note in notes) {
+  	var select = document.querySelector(`[data-note=${notes[note]}]`);
+    select.style.backgroundColor = "dodgerblue";
+  }
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.processSectionDelay = 0;
+MathJax.Hub.Config({
+  messageStyle: 'none',
+  showProcessingMessages: false,
+  tex2jax: {
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['$$', '$$']],
+    processEscapes: true
+  }
+});
+</script>
+<script type="text/javascript">
+(function() {
+  if (window.MathJax != null) {
+    var card = document.querySelector('.card');
+    MathJax.Hub.Queue(['Typeset', MathJax.Hub, card]);
+    return;
+  }
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  document.body.appendChild(script);
+})();
+</script>

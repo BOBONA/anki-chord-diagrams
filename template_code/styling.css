@@ -1,0 +1,57 @@
+body {
+  width: 90%;
+  position: relative;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.keys {
+  position: relative;
+}
+
+.whites {
+  display: flex;
+  width: 100%;
+  border-right: 4px solid black;
+}
+
+.whites>.key {
+  background: white;
+  border-right: 0px;
+}
+
+.blacks {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 3.2%;
+  display: flex;
+}
+
+.blacks>.key {
+  background: black;
+  padding-bottom: 20%;
+  margin: 0% 1%;
+}
+
+.key {
+  border: 4px solid black;
+  flex: 1;
+  height: 0;
+  padding-bottom: 30%;
+}
+
+.fake {
+  visibility: hidden;
+}
+
+.label>span {
+  position: absolute;
+  bottom: 0;
+  font-weight: bold;
+  font-size: 7vw;
+  color: black;
+}
