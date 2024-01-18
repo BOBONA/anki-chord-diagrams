@@ -1,4 +1,5 @@
 let notes = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B", "C2", "Db2", "D2", "Eb2", "E2", "F2", "Gb2", "G2", "Ab2", "A2", "Bb2", "B2"];
+
 // the list of notes used as the root of chords
 let noteSymbols = [
 	["C", 0],
@@ -14,6 +15,7 @@ let noteSymbols = [
   ["A\\sharp", 10], ["B\\flat", 10],
   ["B", 11]
 ];
+
 // the list of chord patterns to use with the notes
 let chordPatterns = [
 	["^{\\Delta7}", [0, 4, 7, 11]],
@@ -22,6 +24,13 @@ let chordPatterns = [
   ["^{ø7}", [0, 3, 6, 10]],
   ["^{\\circ7}", [0, 3, 6, 9]]
 ];
+
+// you can use this code to easily generate scales too 
+let scalePatterns = [
+  [" major", [0, 2, 4, 5, 7, 9, 11]],
+  [" minor", [0, 2, 3, 5, 7, 8, 10]]
+];
+
 // generate the chords
 for (let i in noteSymbols) {
 	let noteSymbol = noteSymbols[i];
